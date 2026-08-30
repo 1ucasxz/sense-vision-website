@@ -1,0 +1,66 @@
+/* Tema dark — valores extraídos dos frames Desktop Dark do Figma. */
+body.theme-dark {
+  --page: #101018;
+  --ink: #ffffff;
+  --tech-bg: #12121c;
+  --device: #181822;
+  --device-inner: #0a0a12;
+  --footer: #181822;
+  background: #101018;
+  color: #ffffff;
+}
+
+.theme-dark .header {
+  background: #181822;
+  border-bottom-color: rgba(115, 120, 140, 0.15);
+}
+
+.theme-dark .nav__link { color: #e0e3eb; }
+.theme-dark .header__cta { color: #0c0c10; }
+.theme-dark main { background: #101018; }
+.theme-dark .footer { background: #181822; }
+
+/* Página 1 */
+.theme-dark .hero { background: rgba(0, 217, 214, 0.04); }
+.theme-dark .hero__ellipse--left { content: url("../assets/img/hero-ellipse-left-dark.svg"); }
+.theme-dark .hero__ellipse--right { content: url("../assets/img/hero-ellipse-right-dark.svg"); }
+.theme-dark .badge-pill {
+  background: rgba(0, 217, 214, 0.18);
+  color: #b0fff0;
+}
+.theme-dark .device-card { background: #181822; }
+.theme-dark .device-card::before { background: #0a0a12; }
+.theme-dark .highlights,
+.theme-dark .stat { background: #181822; }
+.theme-dark .tags { background: #12121c; }
+.theme-dark .tag {
+  background: #181822;
+  color: #b0fff0;
+}
+
+/* Página 2 */
+.theme-dark.instructions-page,
+.theme-dark .instructions-main { background: #101018; }
+.theme-dark .step-card,
+.theme-dark .instructions-flow { background: #181822; }
+.theme-dark .step-card h2,
+.theme-dark .instructions-flow p { color: #ffffff; }
+.theme-dark .video-placeholder { background: #181822; }
+.theme-dark .video-placeholder__inner { background: #0a0a12; }
+.theme-dark .video-placeholder__play-symbol { color: #0c0c10; }
+
+/* Página 3 */
+.theme-dark.product-page,
+.theme-dark .product-main { background: #101018; }
+.theme-dark .components-table__header { background: rgba(0, 217, 214, 0.2); }
+.theme-dark .components-table__header strong { color: #b0fff0; }
+.theme-dark .component-row { background: #181822; }
+.theme-dark .component-row:nth-of-type(2),
+.theme-dark .component-row:nth-of-type(4) { background: #14141f; }
+.theme-dark .component-row h2,
+.theme-dark .recurring-costs > h2,
+.theme-dark .recurring-costs article strong,
+.theme-dark .product-total h2 { color: #ffffff; }
+.theme-dark .recurring-costs article { background: #181822; }
+.theme-dark .product-total { background: rgba(0, 217, 214, 0.18); }
+.theme-dark .product-total > strong { color: #b0fff0; }
