@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SenseVision — Produto e Custos</title>
+  <meta name="description" content="Componentes do protótipo SenseVision e seus valores." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/produto.css" />
+</head>
+<body class="product-page">
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Sense<span>Vision</span></a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html" class="nav__link">Início</a>
+        <a href="instrucoes.html" class="nav__link">Instruções</a>
+        <a href="produto.html" class="nav__link">Produto</a>
+        <a href="#equipe" class="nav__link">Equipe</a>
+        <a href="#referencias" class="nav__link">Referências</a>
+        <a href="#jogo" class="nav__link">O Jogo</a>
+      </nav>
+      <a href="#jogo" class="btn btn--pill btn--teal header__cta">Jogar 🎮</a>
+    </div>
+  </header>
+
+  <main class="product-main">
+    <section class="product-heading">
+      <span class="product-heading__accent" aria-hidden="true"></span>
+      <h1>Produto &amp; Custos</h1>
+      <p>Componentes do protótipo SenseVision e seus valores.</p>
+    </section>
+
+    <section class="components-table" aria-label="Componentes e custos do protótipo">
+      <div class="components-table__header">
+        <strong>Componente</strong>
+        <strong>Mínimo</strong>
+        <strong>Máximo</strong>
+        <strong>Onde comprar</strong>
+      </div>
+
+      <article class="component-row">
+        <span class="component-row__icon" aria-hidden="true">📷</span>
+        <h2>Microcontrolador + Câmera</h2>
+        <p>RESPEBERRY PI 3 + câmera espiã</p>
+        <strong class="component-row__min">R$ 300,00</strong>
+        <strong class="component-row__max">R$ 500,00</strong>
+        <span class="component-row__store">Mercado Livre/Amazon</span>
+      </article>
+
+      <article class="component-row">
+        <span class="component-row__icon" aria-hidden="true">📳</span>
+        <h2>Feedback tátil + Display</h2>
+        <p>Motor de vibração + Mini OLED</p>
+        <strong class="component-row__min">R$ 35,00</strong>
+        <strong class="component-row__max">R$ 50,00</strong>
+        <span class="component-row__store">Mercado Livre/Amazon</span>
+      </article>
+
+      <article class="component-row">
+        <span class="component-row__icon" aria-hidden="true">🔋</span>
+        <h2>Alimentação</h2>
+        <p>Bateria Li-Po + módulo carregador</p>
+        <strong class="component-row__min">R$ 40,00</strong>
+        <strong class="component-row__max">R$ 40,00</strong>
+        <span class="component-row__store">Mercado Livre/Amazon</span>
+      </article>
+
+      <article class="component-row">
+        <span class="component-row__icon" aria-hidden="true">🥽</span>
+        <h2>Estrutura dos Óculos</h2>
+        <p>Armação ou impressão 3D</p>
+        <strong class="component-row__min">R$ 40,00</strong>
+        <strong class="component-row__max">R$ 60,00</strong>
+        <span class="component-row__store">Mercado Livre/Amazon</span>
+      </article>
+    </section>
+
+    <section class="recurring-costs" aria-labelledby="recurring-title">
+      <h2 id="recurring-title">Custos Recorrentes</h2>
+      <article>
+        <strong>Google Cloud Vision (OCR)</strong>
+        <span>R$ 0,00 (free tier)</span>
+      </article>
+      <article>
+        <strong>Firebase</strong>
+        <span>R$ 0,00 (free tier)</span>
+      </article>
+      <article>
+        <strong>Play Store</strong>
+        <span>R$ 125,00</span>
+      </article>
+    </section>
+
+    <section class="product-total">
+      <span class="product-total__accent" aria-hidden="true"></span>
+      <h2>💰 Custo Total do Protótipo</h2>
+      <p>+30% margem recomendada para imprevistos.</p>
+      <strong>R$500 – R$ 780</strong>
+    </section>
+  </main>
+
+  <footer class="footer product-footer">
+    <div class="container">
+      <p>© 2026&nbsp; SenseVision · TCC 3º Ano</p>
+    </div>
+  </footer>
+</body>
+</html>
