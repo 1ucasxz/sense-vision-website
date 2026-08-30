@@ -16,7 +16,17 @@
     `);
   }
 
-  const switchButton = document.querySelector(".theme-switch");
+  const headerInner = document.querySelector(".header__inner");
+  if (headerInner && !headerInner.querySelector(".desktop-theme-switch")) {
+    headerInner.insertAdjacentHTML("beforeend", `
+      <button class="desktop-theme-switch theme-switch" type="button" aria-label="Alternar modo escuro" aria-pressed="false">
+        <span class="desktop-theme-switch__icon" aria-hidden="true">🌙</span>
+        <span class="desktop-theme-switch__label">Modo escuro</span>
+      </button>
+    `);
+  }
+
+  const switchButtons = document.querySelectorAll(".theme-switch");
 
   function updateInternalLinks() {
     document.querySelectorAll('a[href]').forEach((link) => {
@@ -36,7 +46,11 @@
   function applyTheme(updateAddress) {
     document.body.classList.toggle("theme-dark", isDark);
     document.documentElement.style.colorScheme = isDark ? "dark" : "light";
-    switchButton?.setAttribute("aria-pressed", String(isDark));
+    switchButtons.forEach((button) => button.setAttribute("aria-pressed", String(isDark)));
+    const desktopLabel = document.querySelector(".desktop-theme-switch__label");
+    const desktopIcon = document.querySelector(".desktop-theme-switch__icon");
+    if (desktopLabel) desktopLabel.textContent = isDark ? "Modo claro" : "Modo escuro";
+    if (desktopIcon) desktopIcon.textContent = isDark ? "☀️" : "🌙";
 
     if (updateAddress) {
       const url = new URL(window.location.href);
@@ -48,9 +62,11 @@
     updateInternalLinks();
   }
 
-  switchButton?.addEventListener("click", () => {
-    isDark = !isDark;
-    applyTheme(true);
+  switchButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      isDark = !isDark;
+      applyTheme(true);
+    });
   });
 
   applyTheme(false);

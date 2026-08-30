@@ -100,6 +100,38 @@ img { display: block; }
   font-size: 13px;
 }
 
+.desktop-theme-switch {
+  position: absolute;
+  right: 168px;
+  top: 18px;
+  width: 128px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0;
+  border: 1px solid rgba(115, 120, 140, 0.2);
+  border-radius: 8px;
+  background: #f6f7fb;
+  color: var(--ink);
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.desktop-theme-switch:hover { border-color: rgba(0, 217, 214, 0.55); }
+.theme-dark .desktop-theme-switch {
+  border-color: rgba(115, 120, 140, 0.25);
+  background: #101018;
+  color: #e0e3eb;
+}
+
+.menu-theme,
+.menu-version { display: none; }
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -404,7 +436,8 @@ main {
   }
   .logo span { color: inherit; }
   .nav,
-  .header__cta { display: none; }
+  .header__cta,
+  .desktop-theme-switch { display: none; }
   .menu-toggle {
     position: absolute;
     display: block;
