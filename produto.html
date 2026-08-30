@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/dark.css" />
 </head>
 <body class="product-page">
-  <header class="header">
+  <header class="header" id="header">
     <div class="container header__inner">
       <a href="index.html" class="logo">Sense<span>Vision</span></a>
       <nav class="nav" aria-label="Navegação principal">
@@ -25,6 +25,7 @@
         <a href="#jogo" class="nav__link">O Jogo</a>
       </nav>
       <a href="#jogo" class="btn btn--pill btn--teal header__cta">Jogar 🎮</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
@@ -32,7 +33,8 @@
     <section class="product-heading">
       <span class="product-heading__accent" aria-hidden="true"></span>
       <h1>Produto &amp; Custos</h1>
-      <p>Componentes do protótipo SenseVision e seus valores.</p>
+      <p class="heading-copy-desktop">Componentes do protótipo SenseVision e seus valores.</p>
+      <p class="heading-copy-mobile">Componentes e valores.</p>
     </section>
 
     <section class="components-table" aria-label="Componentes e custos do protótipo">
@@ -46,9 +48,9 @@
       <article class="component-row">
         <span class="component-row__icon" aria-hidden="true">📷</span>
         <h2>Microcontrolador + Câmera</h2>
-        <p>RESPEBERRY PI 3 + câmera espiã</p>
-        <strong class="component-row__min">R$ 300,00</strong>
-        <strong class="component-row__max">R$ 500,00</strong>
+        <p data-mobile="ESP32-CAM com câmera integrada">RESPEBERRY PI 3 + câmera espiã</p>
+        <strong class="component-row__min" data-mobile="R$ 50">R$ 300,00</strong>
+        <strong class="component-row__max" data-mobile="R$ 80">R$ 500,00</strong>
         <span class="component-row__store">Mercado Livre/Amazon</span>
       </article>
 
@@ -56,8 +58,8 @@
         <span class="component-row__icon" aria-hidden="true">📳</span>
         <h2>Feedback tátil + Display</h2>
         <p>Motor de vibração + Mini OLED</p>
-        <strong class="component-row__min">R$ 35,00</strong>
-        <strong class="component-row__max">R$ 50,00</strong>
+        <strong class="component-row__min" data-mobile="R$ 35">R$ 35,00</strong>
+        <strong class="component-row__max" data-mobile="R$ 50">R$ 50,00</strong>
         <span class="component-row__store">Mercado Livre/Amazon</span>
       </article>
 
@@ -65,8 +67,8 @@
         <span class="component-row__icon" aria-hidden="true">🔋</span>
         <h2>Alimentação</h2>
         <p>Bateria Li-Po + módulo carregador</p>
-        <strong class="component-row__min">R$ 40,00</strong>
-        <strong class="component-row__max">R$ 40,00</strong>
+        <strong class="component-row__min" data-mobile="R$ 40">R$ 40,00</strong>
+        <strong class="component-row__max" data-mobile="R$ 40">R$ 40,00</strong>
         <span class="component-row__store">Mercado Livre/Amazon</span>
       </article>
 
@@ -74,8 +76,8 @@
         <span class="component-row__icon" aria-hidden="true">🥽</span>
         <h2>Estrutura dos Óculos</h2>
         <p>Armação ou impressão 3D</p>
-        <strong class="component-row__min">R$ 40,00</strong>
-        <strong class="component-row__max">R$ 60,00</strong>
+        <strong class="component-row__min" data-mobile="R$ 40">R$ 40,00</strong>
+        <strong class="component-row__max" data-mobile="R$ 60">R$ 60,00</strong>
         <span class="component-row__store">Mercado Livre/Amazon</span>
       </article>
     </section>
@@ -100,7 +102,7 @@
       <span class="product-total__accent" aria-hidden="true"></span>
       <h2>💰 Custo Total do Protótipo</h2>
       <p>+30% margem recomendada para imprevistos.</p>
-      <strong>R$500 – R$ 780</strong>
+      <strong data-mobile="R$ 165 – R$ 230">R$500 – R$ 780</strong>
     </section>
   </main>
 
@@ -110,5 +112,6 @@
     </div>
   </footer>
   <script src="js/theme.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -116,6 +116,10 @@ img { display: block; }
 .btn--teal { background: var(--cyan); color: var(--ink); }
 .btn--pink { background: var(--pink); color: #fff; }
 .menu-toggle { display: none; }
+.hero__title-mobile,
+.hero__description-mobile,
+.device-card__fruits-mobile,
+.mobile-summary { display: none; }
 
 main {
   width: 100%;
@@ -381,4 +385,283 @@ main {
 @media (max-width: 1200px) {
   body { min-width: 0; }
   .header, main, .footer { min-width: 1024px; }
+}
+
+@media (max-width: 600px) {
+  body { min-width: 0; overflow-x: hidden; }
+  .header, main, .footer { min-width: 0; }
+  .container { max-width: none; padding: 0; }
+
+  .header,
+  .header__inner { width: 100%; height: 60px; }
+  .header { border-bottom: 1px solid rgba(115, 120, 140, 0.15); }
+  .logo {
+    left: 20px;
+    top: 18px;
+    color: var(--cyan);
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .logo span { color: inherit; }
+  .nav,
+  .header__cta { display: none; }
+  .menu-toggle {
+    position: absolute;
+    display: block;
+    right: 12px;
+    top: 12px;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    z-index: 30;
+  }
+  .menu-toggle span {
+    position: absolute;
+    left: 6px;
+    width: 26px;
+    height: 3px;
+    border-radius: 2px;
+    background: rgba(12, 12, 16, 0.85);
+  }
+  .menu-toggle span:nth-child(1) { top: 8px; }
+  .menu-toggle span:nth-child(2) { top: 18px; }
+  .menu-toggle span:nth-child(3) { top: 28px; }
+  .theme-dark .menu-toggle span { background: rgba(255,255,255,.85); }
+
+  .nav-open .nav {
+    display: flex;
+    position: absolute;
+    z-index: 25;
+    left: auto;
+    right: 0;
+    top: 0;
+    width: 280px;
+    height: 550px;
+    padding: 98px 8px 0;
+    flex-direction: column;
+    gap: 4px;
+    border-left: 4px solid var(--cyan);
+    background: linear-gradient(#0d0d14 0 88px, #fff 88px);
+    box-shadow: -12px 16px 32px rgba(12,12,16,.14);
+  }
+  .nav-open .nav::before {
+    content: "SenseVision\A Navegação Principal";
+    position: absolute;
+    left: 16px;
+    top: 24px;
+    color: var(--cyan);
+    white-space: pre;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+  .nav-open .nav::after {
+    content: "🌙   Modo Escuro\A v1.0 · Colégio UNASP · 2026";
+    position: absolute;
+    left: 10px;
+    top: 446px;
+    width: 252px;
+    padding-top: 16px;
+    border-top: 1px solid #e0e3eb;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 30px;
+    white-space: pre-line;
+  }
+  .theme-dark .nav-open .nav { background: linear-gradient(#0c0c10 0 88px, #181822 88px); }
+  .theme-dark .nav-open .nav::after { border-top-color: #2e2e40; color: #e0e3eb; }
+  .nav-open .nav__link {
+    position: relative;
+    display: block;
+    left: auto !important;
+    top: auto;
+    width: 264px;
+    height: 52px;
+    padding: 14px 30px 0 54px;
+    border-bottom: 1px solid #e0e3eb;
+    border-radius: 12px;
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 600;
+  }
+  .nav-open .nav__link::before {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 38px;
+    height: 38px;
+    padding-top: 9px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .nav-open .nav__link::after {
+    content: "›";
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    color: var(--muted);
+    font-size: 20px;
+  }
+  .nav-open .nav__link:nth-child(1)::before { content: "🏠"; background: rgba(0,217,214,.13); }
+  .nav-open .nav__link:nth-child(2)::before { content: "📖"; background: rgba(77,128,255,.13); }
+  .nav-open .nav__link:nth-child(3)::before { content: "🥽"; background: rgba(153,77,255,.13); }
+  .nav-open .nav__link:nth-child(4)::before { content: "👥"; background: rgba(240,60,138,.13); }
+  .nav-open .nav__link:nth-child(5)::before { content: "📚"; background: rgba(255,166,26,.13); }
+  .nav-open .nav__link:nth-child(6)::before { content: "🎮"; background: rgba(0,217,214,.13); }
+  .theme-dark .nav-open .nav__link { color: #e0e3eb; }
+  .theme-dark .nav-open .nav__link { border-bottom-color: #2e2e40; }
+  .theme-dark .nav-open .nav__link:nth-child(1)::before,
+  .theme-dark .nav-open .nav__link:nth-child(6)::before { background: rgba(0,217,214,.22); }
+  .theme-dark .nav-open .nav__link:nth-child(2)::before { background: rgba(77,128,255,.22); }
+  .theme-dark .nav-open .nav__link:nth-child(3)::before { background: rgba(153,77,255,.22); }
+  .theme-dark .nav-open .nav__link:nth-child(4)::before { background: rgba(240,60,138,.22); }
+  .theme-dark .nav-open .nav__link:nth-child(5)::before { background: rgba(255,166,26,.22); }
+  .menu-toggle.is-active {
+    width: 36px;
+    height: 36px;
+    top: 22px;
+    right: 6px;
+    border-radius: 18px;
+    background: rgba(0,217,214,.15);
+  }
+  .menu-toggle.is-active span { left: 10px; top: 17px; width: 16px; background: var(--cyan); }
+  .menu-toggle.is-active span:nth-child(1) { transform: rotate(45deg); }
+  .menu-toggle.is-active span:nth-child(2) { opacity: 0; }
+  .menu-toggle.is-active span:nth-child(3) { transform: rotate(-45deg); }
+
+  main { width: 100%; max-width: none; height: 868px; }
+  .hero {
+    height: 638px;
+    overflow: visible;
+    background: transparent;
+  }
+  .hero__grid { width: 100%; height: 638px; }
+  .hero__ellipse--left { left: -60px; top: 20px; width: 220px; height: 220px; }
+  .hero__ellipse--right { left: auto; right: -5px; top: 330px; width: 170px; height: 170px; }
+  .hero__content { left: 0; width: 100%; }
+  .badge-pill {
+    left: 20px;
+    top: 20px;
+    width: 156px;
+    height: 28px;
+    padding: 0 10px;
+    border-radius: 14px;
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .hero__title,
+  .hero__description { display: none; }
+  .hero__title-mobile {
+    position: absolute;
+    display: block;
+    left: 20px;
+    top: 60px;
+    width: 335px;
+    color: var(--ink);
+    font-size: 38px;
+    line-height: 46px;
+    font-weight: 700;
+  }
+  .badge-pill { font-size: 0; }
+  .badge-pill::after { content: "🧠 Óculos p/ Discalculia"; font-size: 11px; }
+  .hero__title-mobile small {
+    display: block;
+    margin-top: 8px;
+    color: var(--cyan);
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+  }
+  .hero__description-mobile {
+    position: absolute;
+    display: block;
+    left: 20px;
+    top: 242px;
+    width: 335px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .hero__visual {
+    left: 20px;
+    top: 338px;
+    width: 335px;
+    height: 172px;
+  }
+  .device-card { width: 335px; height: 172px; border-radius: 16px; background: #12121c; }
+  .device-card::before { inset: 12px; border-radius: 12px; background: #0d0d1a; }
+  .theme-dark .device-card { background: #181822; }
+  .theme-dark .device-card::before { background: #0a0a12; }
+  .device-card > * { left: 12px; width: 311px; }
+  .device-card__label { top: 40px; font-size: 12px; line-height: 15px; }
+  .device-card__label::after { display: none; }
+  .device-card__equation { top: 62px; font-size: 18px; line-height: 22px; }
+  .device-card__arrow { top: 90px; font-size: 11px; line-height: 13px; }
+  .device-card__fruits,
+  .device-card__result,
+  .device-card__audio { display: none; }
+  .device-card__fruits-mobile {
+    display: block;
+    top: 112px;
+    color: var(--cyan-soft);
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+  }
+  .hero__actions {
+    left: 20px;
+    top: 532px;
+    width: 335px;
+    display: block;
+  }
+  .hero__actions .btn:first-child,
+  .hero__actions .btn:last-child { width: 335px; height: 48px; }
+  .hero__actions .btn:last-child { margin-top: 10px; }
+  .highlights { display: none; }
+
+  .stats { height: 230px; padding: 18px 20px 0; }
+  .stats .container { width: 335px; }
+  .stats__grid {
+    grid-template-columns: 155px 155px;
+    gap: 25px;
+    margin: 0;
+  }
+  .stat { height: 80px; padding: 12px 14px 0; border-radius: 12px; }
+  .stat:nth-child(n+3) { display: none; }
+  .stat__value { font-size: 26px; line-height: 31px; }
+  .stat__label { margin: 0; font-size: 11px; line-height: 13px; }
+  .tags { display: none; }
+  .mobile-summary {
+    position: absolute;
+    display: block;
+    left: 20px;
+    top: 754px;
+    width: 335px;
+    height: 104px;
+    padding: 24px 12px 0;
+    border-radius: 12px;
+    background: #fff;
+    color: var(--ink);
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .theme-dark .mobile-summary { background: #181822; color: #b0fff0; }
+  .mobile-summary p { margin: 0; }
+
+  .footer { width: 100%; height: 52px; padding: 16px 0 0; }
+  .footer .container { width: 100%; }
+  .footer p {
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .footer p { font-size: 0; }
+  .footer p::after { content: "© 2026 SenseVision · TCC 3º Ano"; font-size: 11px; }
 }

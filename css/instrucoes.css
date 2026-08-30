@@ -58,6 +58,9 @@
   font-size: 15px;
   line-height: 18px;
 }
+.heading-copy-mobile { display: none; }
+.step-connector--four,
+.step-connector--five { display: none; }
 
 .steps {
   position: absolute;
@@ -238,4 +241,157 @@
 
 @media (max-width: 1200px) {
   .instructions-main { min-width: 1024px; }
+}
+
+@media (max-width: 600px) {
+  .instructions-footer { height: 52px; }
+  .instructions-main {
+    min-width: 0;
+    width: 100%;
+    height: 1288px;
+  }
+  .instructions-heading { height: 76px; }
+  .instructions-heading__accent {
+    left: 20px;
+    top: 12px;
+    width: 5px;
+    height: 50px;
+  }
+  .instructions-heading h1 {
+    left: 32px;
+    top: 16px;
+    font-size: 22px;
+    line-height: 27px;
+  }
+  .instructions-heading p {
+    left: 32px;
+    top: 44px;
+    width: 335px;
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .heading-copy-desktop { display: none; }
+  .heading-copy-mobile { display: block; }
+
+  .steps {
+    left: 20px;
+    top: 96px;
+    width: 335px;
+    height: 808px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .step-card {
+    flex: 0 0 118px;
+    width: 335px;
+    height: 118px;
+    border-radius: 14px;
+  }
+  .step-card__number {
+    left: 8px;
+    top: 14px;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .step-card__icon {
+    left: 62px;
+    top: 16px;
+    font-size: 22px;
+    line-height: 27px;
+  }
+  .step-card h2 {
+    left: 96px;
+    top: 18px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .step-card p {
+    left: 8px;
+    top: 66px;
+    width: 311px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .step-connector {
+    display: block;
+    z-index: 3;
+    left: 0;
+    width: 335px;
+    height: 20px;
+    text-align: center;
+  }
+  .step-connector::before { display: none; }
+  .step-connector span {
+    left: 160px;
+    top: 0;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .step-connector--one { top: 118px; }
+  .step-connector--two { top: 256px; }
+  .step-connector--three { top: 394px; }
+  .step-connector--four { top: 532px; }
+  .step-connector--five { top: 670px; }
+  .step-connector span { font-size: 0; }
+  .step-connector span::after { content: "↓"; font-size: 16px; }
+
+  .instructions-flow {
+    left: 20px;
+    top: 932px;
+    width: 335px;
+    height: 48px;
+  }
+  .instructions-flow p {
+    left: 0;
+    top: 14px;
+    width: 335px;
+    color: var(--cyan);
+    text-align: center;
+    font-size: 0;
+  }
+  .instructions-flow p::after {
+    content: "📸→🧠→🍎→🔊→📊";
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .video-placeholder {
+    left: 20px;
+    top: 992px;
+    width: 335px;
+    height: 168px;
+    padding: 0;
+    border-radius: 16px;
+  }
+  .video-placeholder__inner {
+    width: 335px;
+    height: 168px;
+    border-radius: 16px;
+    background: transparent;
+  }
+  .video-placeholder img {
+    left: 139px;
+    top: 56px;
+    width: 56px;
+    height: 56px;
+  }
+  .video-placeholder__play-symbol {
+    left: 157px;
+    top: 70px;
+    font-size: 22px;
+    line-height: 27px;
+  }
+  .video-placeholder p {
+    left: 0;
+    top: 135px;
+    width: 335px;
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .video-placeholder p { font-size: 0; }
+  .video-placeholder p::after { content: "Vídeo Demo · máx. 40s"; font-size: 11px; }
+  .instructions-footer p::after { content: "© 2026 SenseVision"; }
 }

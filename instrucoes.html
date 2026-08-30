@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/dark.css" />
 </head>
 <body class="instructions-page">
-  <header class="header">
+  <header class="header" id="header">
     <div class="container header__inner">
       <a href="index.html" class="logo">Sense<span>Vision</span></a>
       <nav class="nav" aria-label="Navegação principal">
@@ -25,6 +25,7 @@
         <a href="#jogo" class="nav__link">O Jogo</a>
       </nav>
       <a href="#jogo" class="btn btn--pill btn--teal header__cta">Jogar 🎮</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
@@ -32,13 +33,16 @@
     <section class="instructions-heading">
       <span class="instructions-heading__accent" aria-hidden="true"></span>
       <h1>Guia de Utilização</h1>
-      <p>Siga o passo a passo para usar o SenseVision.</p>
+      <p class="heading-copy-desktop">Siga o passo a passo para usar o SenseVision.</p>
+      <p class="heading-copy-mobile">6 passos para usar o SenseVision.</p>
     </section>
 
     <section class="steps" aria-label="Passos de utilização">
       <div class="step-connector step-connector--one"><span>→</span></div>
       <div class="step-connector step-connector--two"><span>→</span></div>
       <div class="step-connector step-connector--three"><span>→</span></div>
+      <div class="step-connector step-connector--four"><span>↓</span></div>
+      <div class="step-connector step-connector--five"><span>↓</span></div>
 
       <article class="step-card">
         <span class="step-card__number">01</span>
@@ -102,5 +106,6 @@
     </div>
   </footer>
   <script src="js/theme.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

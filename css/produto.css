@@ -60,6 +60,7 @@
   font-size: 15px;
   line-height: 18px;
 }
+.heading-copy-mobile { display: none; }
 
 .components-table {
   position: absolute;
@@ -268,4 +269,152 @@
 
 @media (max-width: 1200px) {
   .product-main { min-width: 1024px; }
+}
+
+@media (max-width: 600px) {
+  .product-footer { height: 52px; }
+  .product-main {
+    min-width: 0;
+    width: 100%;
+    height: 888px;
+  }
+  .product-heading { height: 76px; }
+  .product-heading__accent {
+    left: 20px;
+    top: 12px;
+    width: 5px;
+    height: 50px;
+  }
+  .product-heading h1 {
+    left: 32px;
+    top: 16px;
+    font-size: 22px;
+    line-height: 27px;
+  }
+  .product-heading p {
+    left: 32px;
+    top: 43px;
+    width: 335px;
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .heading-copy-desktop { display: none; }
+  .heading-copy-mobile { display: block; }
+
+  .components-table {
+    left: 20px;
+    top: 96px;
+    width: 335px;
+    height: 448px;
+  }
+  .components-table__header { display: none; }
+  .component-row,
+  .component-row:nth-of-type(2),
+  .component-row:nth-of-type(4) {
+    position: absolute;
+    left: 0;
+    width: 335px;
+    height: 100px;
+    border: 0;
+    border-radius: 14px;
+    background: #fff;
+  }
+  .component-row:nth-of-type(1) { top: 0; }
+  .component-row:nth-of-type(2) { top: 116px; }
+  .component-row:nth-of-type(3) { top: 232px; }
+  .component-row:nth-of-type(4) { top: 348px; }
+  .theme-dark .component-row,
+  .theme-dark .component-row:nth-of-type(2),
+  .theme-dark .component-row:nth-of-type(4) { background: #181822; }
+  .component-row__icon {
+    left: 8px;
+    top: 14px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .component-row h2 {
+    left: 42px;
+    top: 14px;
+    width: 255px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .component-row p {
+    left: 42px;
+    top: 36px;
+    width: 255px;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+  }
+  .component-row p[data-mobile] { font-size: 0; }
+  .component-row p[data-mobile]::after {
+    content: attr(data-mobile);
+    font-size: 12px;
+  }
+  .component-row__store { display: none; }
+  .component-row__min,
+  .component-row__max {
+    top: 66px;
+    width: 143px;
+    height: 26px;
+    padding: 6px 9px 0;
+    border-radius: 8px;
+    color: var(--ink);
+    font-size: 0;
+    line-height: 15px;
+  }
+  .component-row__min {
+    left: 20px;
+    background: rgba(176,255,240,.4);
+  }
+  .component-row__max {
+    left: 172px;
+    background: rgba(255,166,197,.4);
+  }
+  .component-row__min::before { content: "Mín: "; font-size: 12px; }
+  .component-row__max::before { content: "Máx: "; font-size: 12px; }
+  .component-row__min::after,
+  .component-row__max::after { content: attr(data-mobile); font-size: 12px; }
+  .theme-dark .component-row__min {
+    color: #b0fff0;
+    background: rgba(176,255,240,.15);
+  }
+  .theme-dark .component-row__max {
+    color: #ffa6c5;
+    background: rgba(255,166,197,.15);
+  }
+
+  .recurring-costs { display: none; }
+  .product-total {
+    left: 20px;
+    top: 572px;
+    width: 335px;
+    height: 90px;
+  }
+  .product-total__accent { width: 5px; height: 90px; }
+  .product-total h2 {
+    left: 17px;
+    top: 15px;
+    font-size: 0;
+  }
+  .product-total h2::after {
+    content: "💰 Custo Total";
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .product-total p { display: none; }
+  .product-total > strong {
+    left: 17px;
+    top: 42px;
+    color: var(--ink);
+    font-size: 0;
+    line-height: 22px;
+  }
+  .product-total > strong::after {
+    content: attr(data-mobile);
+    font-size: 18px;
+  }
+  .theme-dark .product-total > strong { color: #b0fff0; }
+  .product-footer p::after { content: "© 2026 SenseVision"; }
 }
