@@ -1,0 +1,241 @@
+.instructions-page {
+  background: var(--page);
+}
+
+.instructions-page .nav {
+  left: 484px;
+  width: 518px;
+}
+
+.instructions-page .nav__link:nth-child(1) { left: 0; }
+.instructions-page .nav__link:nth-child(2) { left: 78px; }
+.instructions-page .nav__link:nth-child(3) { left: 166px; }
+.instructions-page .nav__link:nth-child(4) { left: 241px; }
+.instructions-page .nav__link:nth-child(5) { left: 329px; }
+.instructions-page .nav__link:nth-child(6) { left: 418px; }
+
+.instructions-main {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  height: 936px;
+  margin: 0 auto;
+  background: var(--page);
+}
+
+.instructions-heading {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 108px;
+  background: rgba(0, 217, 214, 0.06);
+}
+
+.instructions-heading__accent {
+  position: absolute;
+  left: 61px;
+  top: 19px;
+  width: 6px;
+  height: 64px;
+  border-radius: 3px;
+  background: var(--cyan);
+}
+
+.instructions-heading h1 {
+  position: absolute;
+  left: 80px;
+  top: 18px;
+  font-size: 34px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.instructions-heading p {
+  position: absolute;
+  left: 80px;
+  top: 64px;
+  width: 800px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.steps {
+  position: absolute;
+  left: 64px;
+  top: 136px;
+  width: 1336px;
+  height: 468px;
+  display: grid;
+  grid-template-columns: 640px 640px;
+  grid-template-rows: repeat(3, 140px);
+  column-gap: 56px;
+  row-gap: 24px;
+}
+
+.step-card {
+  position: relative;
+  z-index: 1;
+  width: 640px;
+  height: 140px;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.step-card__number {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--cyan);
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+}
+
+.step-card__icon {
+  position: absolute;
+  left: 82px;
+  top: 22px;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.step-card h2 {
+  position: absolute;
+  left: 120px;
+  top: 22px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.step-card p {
+  position: absolute;
+  left: 120px;
+  top: 48px;
+  width: 495px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.step-card strong {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.step-connector {
+  position: absolute;
+  z-index: 0;
+  left: 640px;
+  width: 120px;
+  height: 18px;
+}
+
+.step-connector::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 120px;
+  height: 2px;
+  background: rgba(0, 217, 214, 0.3);
+}
+
+.step-connector span {
+  position: absolute;
+  left: 28px;
+  top: 0;
+  color: var(--cyan);
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.step-connector--one { top: 48px; }
+.step-connector--two { top: 212px; }
+.step-connector--three { top: 376px; }
+
+.instructions-flow {
+  position: absolute;
+  left: 64px;
+  top: 628px;
+  width: 1312px;
+  height: 60px;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.instructions-flow p {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 1260px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 600;
+}
+
+.instructions-flow strong { font-weight: 600; }
+
+.video-placeholder {
+  position: absolute;
+  left: 64px;
+  top: 712px;
+  width: 1312px;
+  height: 204px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #12121f;
+}
+
+.video-placeholder__inner {
+  position: relative;
+  width: 1272px;
+  height: 164px;
+  border-radius: 14px;
+  background: #0d0d1a;
+}
+
+.video-placeholder img {
+  position: absolute;
+  left: 600px;
+  top: 46px;
+  width: 72px;
+  height: 72px;
+}
+
+.video-placeholder__play-symbol {
+  position: absolute;
+  left: 625px;
+  top: 65px;
+  color: var(--ink);
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 700;
+}
+
+.video-placeholder p {
+  position: absolute;
+  left: 186px;
+  top: 141px;
+  width: 900px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.instructions-footer {
+  height: 72px;
+}
+
+@media (max-width: 1200px) {
+  .instructions-main { min-width: 1024px; }
+}
