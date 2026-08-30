@@ -433,7 +433,7 @@ main {
 
   .nav-open .nav {
     display: flex;
-    position: absolute;
+    position: fixed;
     z-index: 25;
     left: auto;
     right: 0;
@@ -458,21 +458,7 @@ main {
     line-height: 18px;
     font-weight: 700;
   }
-  .nav-open .nav::after {
-    content: "🌙   Modo Escuro\A v1.0 · Colégio UNASP · 2026";
-    position: absolute;
-    left: 10px;
-    top: 446px;
-    width: 252px;
-    padding-top: 16px;
-    border-top: 1px solid #e0e3eb;
-    color: var(--muted);
-    font-size: 11px;
-    line-height: 30px;
-    white-space: pre-line;
-  }
   .theme-dark .nav-open .nav { background: linear-gradient(#0c0c10 0 88px, #181822 88px); }
-  .theme-dark .nav-open .nav::after { border-top-color: #2e2e40; color: #e0e3eb; }
   .nav-open .nav__link {
     position: relative;
     display: block;
@@ -522,7 +508,73 @@ main {
   .theme-dark .nav-open .nav__link:nth-child(3)::before { background: rgba(153,77,255,.22); }
   .theme-dark .nav-open .nav__link:nth-child(4)::before { background: rgba(240,60,138,.22); }
   .theme-dark .nav-open .nav__link:nth-child(5)::before { background: rgba(255,166,26,.22); }
+  .menu-theme,
+  .menu-version { display: none; }
+  .nav-open .menu-theme {
+    position: absolute;
+    left: 10px;
+    top: 446px;
+    display: block;
+    width: 252px;
+    height: 42px;
+    border-top: 1px solid #e0e3eb;
+  }
+  .nav-open .menu-theme__icon {
+    position: absolute;
+    left: 1px;
+    top: 15px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .nav-open .menu-theme__label {
+    position: absolute;
+    left: 26px;
+    top: 18px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .nav-open .theme-switch {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: 42px;
+    height: 22px;
+    padding: 0;
+    border: 0;
+    border-radius: 11px;
+    background: #e0e3eb;
+    cursor: pointer;
+  }
+  .nav-open .theme-switch__thumb {
+    position: absolute;
+    left: 4px;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    transition: left .18s ease;
+  }
+  .nav-open .theme-switch[aria-pressed="true"] { background: var(--cyan); }
+  .nav-open .theme-switch[aria-pressed="true"] .theme-switch__thumb { left: 22px; }
+  .nav-open .menu-version {
+    position: absolute;
+    left: 10px;
+    top: 496px;
+    display: block;
+    width: 252px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 9px;
+    line-height: 11px;
+  }
+  .theme-dark .nav-open .menu-theme { border-top-color: #2e2e40; }
+  .theme-dark .nav-open .menu-theme__label,
+  .theme-dark .nav-open .menu-version { color: #e0e3eb; }
+  .theme-dark .nav-open .theme-switch { background: var(--cyan); }
   .menu-toggle.is-active {
+    position: fixed;
     width: 36px;
     height: 36px;
     top: 22px;
