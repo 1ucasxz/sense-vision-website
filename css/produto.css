@@ -417,4 +417,15 @@
   }
   .theme-dark .product-total > strong { color: #b0fff0; }
   .product-footer p::after { content: "© 2026 SenseVision"; }
+
+  .product-heading__accent,
+  .components-table,
+  .product-total {
+    left: calc(50% - 167.5px);
+  }
+
+  .product-heading h1,
+  .product-heading p {
+    left: calc(50% - 155.5px);
+  }
 }

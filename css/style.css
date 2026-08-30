@@ -664,4 +664,14 @@ main {
   }
   .footer p { font-size: 0; }
   .footer p::after { content: "© 2026 SenseVision · TCC 3º Ano"; font-size: 11px; }
+
+  /* Mantém o grid de 335px do Figma centralizado em telas mobile maiores. */
+  .badge-pill,
+  .hero__title-mobile,
+  .hero__description-mobile,
+  .hero__visual,
+  .hero__actions,
+  .mobile-summary {
+    left: calc(50% - 167.5px);
+  }
 }

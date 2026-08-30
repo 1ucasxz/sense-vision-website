@@ -394,4 +394,16 @@
   .video-placeholder p { font-size: 0; }
   .video-placeholder p::after { content: "Vídeo Demo · máx. 40s"; font-size: 11px; }
   .instructions-footer p::after { content: "© 2026 SenseVision"; }
+
+  .instructions-heading__accent,
+  .steps,
+  .instructions-flow,
+  .video-placeholder {
+    left: calc(50% - 167.5px);
+  }
+
+  .instructions-heading h1,
+  .instructions-heading p {
+    left: calc(50% - 155.5px);
+  }
 }
