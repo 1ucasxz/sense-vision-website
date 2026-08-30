@@ -273,6 +273,13 @@
 
 @media (max-width: 600px) {
   .product-footer { height: 52px; }
+  .product-page .nav-open .nav {
+    left: auto;
+    right: 0;
+    top: 0;
+    width: 280px;
+    height: 550px;
+  }
   .product-main {
     min-width: 0;
     width: 100%;

@@ -245,6 +245,13 @@
 
 @media (max-width: 600px) {
   .instructions-footer { height: 52px; }
+  .instructions-page .nav-open .nav {
+    left: auto;
+    right: 0;
+    top: 0;
+    width: 280px;
+    height: 550px;
+  }
   .instructions-main {
     min-width: 0;
     width: 100%;
