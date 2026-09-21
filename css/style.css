@@ -13,7 +13,10 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
 
 body {
   margin: 0;
@@ -79,6 +82,22 @@ img { display: block; }
   line-height: 17px;
   font-weight: 400;
   white-space: nowrap;
+}
+
+.nav__link--active {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.nav__link--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--cyan);
 }
 
 .nav__link:nth-child(1) { left: 0; }
@@ -419,7 +438,7 @@ main {
   .header, main, .footer { min-width: 1024px; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   body { min-width: 0; overflow-x: hidden; }
   .header, main, .footer { min-width: 0; }
   .container { max-width: none; padding: 0; }
@@ -527,12 +546,12 @@ main {
     color: var(--muted);
     font-size: 20px;
   }
-  .nav-open .nav__link:nth-child(1)::before { content: "🏠"; background: rgba(0,217,214,.13); }
-  .nav-open .nav__link:nth-child(2)::before { content: "📖"; background: rgba(77,128,255,.13); }
-  .nav-open .nav__link:nth-child(3)::before { content: "🥽"; background: rgba(153,77,255,.13); }
-  .nav-open .nav__link:nth-child(4)::before { content: "👥"; background: rgba(240,60,138,.13); }
-  .nav-open .nav__link:nth-child(5)::before { content: "📚"; background: rgba(255,166,26,.13); }
-  .nav-open .nav__link:nth-child(6)::before { content: "🎮"; background: rgba(0,217,214,.13); }
+  .nav-open .nav__link:nth-child(1)::before { content: ""; background: rgba(0,217,214,.13); }
+  .nav-open .nav__link:nth-child(2)::before { content: ""; background: rgba(77,128,255,.13); }
+  .nav-open .nav__link:nth-child(3)::before { content: ""; background: rgba(153,77,255,.13); }
+  .nav-open .nav__link:nth-child(4)::before { content: ""; background: rgba(240,60,138,.13); }
+  .nav-open .nav__link:nth-child(5)::before { content: ""; background: rgba(255,166,26,.13); }
+  .nav-open .nav__link:nth-child(6)::before { content: ""; background: rgba(0,217,214,.13); }
   .theme-dark .nav-open .nav__link { color: #e0e3eb; }
   .theme-dark .nav-open .nav__link { border-bottom-color: #2e2e40; }
   .theme-dark .nav-open .nav__link:nth-child(1)::before,
@@ -654,7 +673,7 @@ main {
     font-weight: 700;
   }
   .badge-pill { font-size: 0; }
-  .badge-pill::after { content: "🧠 Óculos p/ Discalculia"; font-size: 11px; }
+  .badge-pill::after { content: " Óculos p/ Discalculia"; font-size: 11px; }
   .hero__title-mobile small {
     display: block;
     margin-top: 8px;

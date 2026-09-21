@@ -64,3 +64,14 @@ body.theme-dark {
 .theme-dark .recurring-costs article { background: #181822; }
 .theme-dark .product-total { background: rgba(0, 217, 214, 0.18); }
 .theme-dark .product-total > strong { color: #b0fff0; }
+
+/* Parte 2 — páginas 4, 5 e 6 */
+.theme-dark .page-main{background:#101018}
+.theme-dark .page-intro h1,.theme-dark .member-card h2,.theme-dark .contact-panel h2,.theme-dark .ref-card h2,.theme-dark .story-card h2,.theme-dark .how-section h2,.theme-dark .how-card strong{color:#fff}
+.theme-dark .page-intro p,.theme-dark .member-social,.theme-dark .contact-panel>p,.theme-dark .ref-card p,.theme-dark .story-card p,.theme-dark .how-card span,.theme-dark .access-note{color:#8d93a3}
+.theme-dark .member-card:nth-child(1){background:rgba(0,217,214,.12)}.theme-dark .member-card:nth-child(2){background:rgba(240,60,138,.12)}.theme-dark .member-card:nth-child(3){background:rgba(255,166,197,.12)}.theme-dark .member-card:nth-child(4){background:rgba(176,255,240,.11)}.theme-dark .member-card:nth-child(5){background:rgba(153,102,255,.13)}
+.theme-dark .member-role,.theme-dark .member-contact{background:#23232f;color:#e4e7ec}
+.theme-dark .contact-panel,.theme-dark .ref-card,.theme-dark .story-card,.theme-dark .how-card,.theme-dark .download-link{background:#181822}
+.theme-dark .contact-form input,.theme-dark .contact-form textarea{background:#11111a;border-color:#30303c;color:#fff}
+.theme-dark .download-link{border-color:#30303c;color:#fff}
+.theme-dark .site-footer--compact{border-top:1px solid #292934}

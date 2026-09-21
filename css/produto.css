@@ -2,19 +2,6 @@
   background: var(--page);
 }
 
-.product-page .nav {
-  left: 484px;
-  width: 518px;
-}
-
-.product-page .nav__link:nth-child(1) { left: 0; }
-.product-page .nav__link:nth-child(2) { left: 78px; }
-.product-page .nav__link:nth-child(3) { left: 166px; }
-.product-page .nav__link:nth-child(4) { left: 241px; }
-.product-page .nav__link:nth-child(5) { left: 329px; }
-.product-page .nav__link:nth-child(6) { left: 418px; }
-.product-page .header__cta { line-height: 16px; }
-
 .product-main {
   position: relative;
   width: 100%;
@@ -271,7 +258,7 @@
   .product-main { min-width: 1024px; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .product-footer { height: 52px; }
   .product-page .nav-open .nav {
     left: auto;
@@ -406,7 +393,7 @@
     font-size: 0;
   }
   .product-total h2::after {
-    content: "💰 Custo Total";
+    content: " Custo Total";
     font-size: 14px;
     line-height: 17px;
   }

@@ -1,0 +1,45 @@
+.icon{display:inline-block!important;position:static!important;width:1em;height:1em;min-width:1em;flex-shrink:0;background-color:currentColor;vertical-align:-.15em;-webkit-mask:var(--icon) center/contain no-repeat;mask:var(--icon) center/contain no-repeat}
+.icon--apple{color:#e35165}.icon--orange{color:#ed9b25}
+.btn,.game-badge{gap:6px}
+.icon--camera{--icon:url("../assets/icons/camera.svg")}
+.icon--brain{--icon:url("../assets/icons/brain.svg")}
+.icon--apple{--icon:url("../assets/icons/apple.svg")}
+.icon--orange{--icon:url("../assets/icons/orange.svg")}
+.icon--game{--icon:url("../assets/icons/game.svg")}
+.icon--target{--icon:url("../assets/icons/target.svg")}
+.icon--rocket{--icon:url("../assets/icons/rocket.svg")}
+.icon--sparkles{--icon:url("../assets/icons/sparkles.svg")}
+.icon--check{--icon:url("../assets/icons/check.svg")}
+.icon--volume{--icon:url("../assets/icons/volume.svg")}
+.icon--phone{--icon:url("../assets/icons/phone.svg")}
+.icon--users{--icon:url("../assets/icons/users.svg")}
+.icon--chart{--icon:url("../assets/icons/chart.svg")}
+.icon--box{--icon:url("../assets/icons/box.svg")}
+.icon--bolt{--icon:url("../assets/icons/bolt.svg")}
+.icon--battery{--icon:url("../assets/icons/battery.svg")}
+.icon--glasses{--icon:url("../assets/icons/glasses.svg")}
+.icon--wallet{--icon:url("../assets/icons/wallet.svg")}
+.icon--mail{--icon:url("../assets/icons/mail.svg")}
+.icon--eye{--icon:url("../assets/icons/eye.svg")}
+.icon--up{--icon:url("../assets/icons/up.svg")}
+.icon--download{--icon:url("../assets/icons/download.svg")}
+.icon--play{--icon:url("../assets/icons/play.svg")}
+.icon--moon{--icon:url("../assets/icons/moon.svg")}
+.icon--sun{--icon:url("../assets/icons/sun.svg")}
+.icon--home{--icon:url("../assets/icons/home.svg")}
+.icon--book{--icon:url("../assets/icons/book.svg")}
+.icon--instagram{--icon:url("../assets/icons/instagram.svg")}
+@media(max-width:768px){
+.nav-open .nav__link::before{content:"";padding:0;background-color:currentColor!important;-webkit-mask:var(--nav-icon) center/22px no-repeat;mask:var(--nav-icon) center/22px no-repeat}
+.nav-open .nav__link:nth-child(1){--nav-icon:url("../assets/icons/home.svg")}
+.nav-open .nav__link:nth-child(2){--nav-icon:url("../assets/icons/book.svg")}
+.nav-open .nav__link:nth-child(3){--nav-icon:url("../assets/icons/glasses.svg")}
+.nav-open .nav__link:nth-child(4){--nav-icon:url("../assets/icons/users.svg")}
+.nav-open .nav__link:nth-child(5){--nav-icon:url("../assets/icons/book.svg")}
+.nav-open .nav__link:nth-child(6){--nav-icon:url("../assets/icons/game.svg")}
+.badge-pill>.icon{font-size:14px;margin-right:5px}
+.product-total h2>.icon{font-size:16px;margin-right:5px}
+.instructions-flow p{font-size:0;display:flex;align-items:center;justify-content:center;gap:12px}
+.instructions-flow p strong{display:none}.instructions-flow p .icon{font-size:20px}
+.how-card .icon{display:inline-block}
+}

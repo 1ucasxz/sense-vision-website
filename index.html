@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/dark.css" />
-</head>
+  <link rel="stylesheet" href="css/style.css?v=icons-1" />
+  <link rel="stylesheet" href="css/dark.css?v=icons-1" />
+<link rel="stylesheet" href="css/icons.css?v=icons-1"><link rel="stylesheet" href="css/responsive.css?v=fluid-1"></head>
 <body>
 
   <!-- Header -->
@@ -18,16 +18,16 @@
     <div class="container header__inner">
       <a href="index.html" class="logo">Sense<span>Vision</span></a>
 
-      <nav class="nav" id="nav">
-        <a href="index.html" class="nav__link nav__link--active">Início</a>
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <a href="index.html" class="nav__link nav__link--active" aria-current="page">Início</a>
         <a href="instrucoes.html" class="nav__link">Instruções</a>
         <a href="produto.html" class="nav__link">Produto</a>
-        <a href="#equipe" class="nav__link">Equipe</a>
-        <a href="#referencias" class="nav__link">Referências</a>
-        <a href="#jogo" class="nav__link">O Jogo</a>
+        <a href="equipe.html" class="nav__link">Equipe</a>
+        <a href="referencias.html" class="nav__link">Referências</a>
+        <a href="jogo.html" class="nav__link">O Jogo</a>
       </nav>
 
-      <a href="#jogo" class="btn btn--pill btn--teal header__cta">Jogar 🎮</a>
+      <a href="jogo.html" class="btn btn--pill btn--teal header__cta">Jogar <span class="icon icon--game" aria-hidden="true"></span></a>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -43,7 +43,7 @@
       <div class="container hero__grid">
 
         <div class="hero__content">
-          <span class="badge-pill">🧠 Óculos para Discalculia</span>
+          <span class="badge-pill"><span class="icon icon--brain" aria-hidden="true"></span> Óculos para Discalculia</span>
 
           <h1 class="hero__title">
             <span>Matemática ficou</span>
@@ -56,51 +56,46 @@
           <p class="hero__description">
             Óculos inteligentes que capturam exercícios matemáticos<br />
             e os transformam em representações visuais simples<br />
-            para pessoas com Discalculia. Câmera → OCR → 🍎
+            para pessoas com Discalculia. Câmera → OCR → <span class="icon icon--apple" role="img" aria-label="maçã"></span>
           </p>
           <p class="hero__description-mobile">Óculos inteligentes que capturam exercícios matemáticos e os transformam em imagens simples para pessoas com Discalculia.</p>
 
           <div class="hero__actions">
             <a href="produto.html" class="btn btn--pill btn--teal">Conhecer o Projeto</a>
-            <a href="#demo" class="btn btn--pill btn--pink">▶ Ver Demonstração</a>
+            <a href="#demo" class="btn btn--pill btn--pink"><span class="icon icon--play" aria-hidden="true"></span> Ver Demonstração</a>
           </div>
         </div>
 
         <div class="hero__visual">
           <div class="device-card">
-            <p class="device-card__label">📷 Câmera captura o exercício</p>
+            <p class="device-card__label"><span class="icon icon--camera" aria-hidden="true"></span> Câmera captura o exercício</p>
 
             <div class="device-card__equation">2 + 3 = ?</div>
             <p class="device-card__arrow">↓ interpretado como</p>
 
             <div class="device-card__fruits">
-              🍎🍎&nbsp; +&nbsp; 🍊🍊🍊&nbsp; =&nbsp; 🍎🍎🍊🍊🍊
+              <span class="icon icon--apple" role="img" aria-label="maçã"></span><span class="icon icon--apple" role="img" aria-label="maçã"></span>&nbsp; +&nbsp; <span class="icon icon--orange" role="img" aria-label="laranja"></span><span class="icon icon--orange" role="img" aria-label="laranja"></span><span class="icon icon--orange" role="img" aria-label="laranja"></span>&nbsp; =&nbsp; <span class="icon icon--apple" role="img" aria-label="maçã"></span><span class="icon icon--apple" role="img" aria-label="maçã"></span><span class="icon icon--orange" role="img" aria-label="laranja"></span><span class="icon icon--orange" role="img" aria-label="laranja"></span><span class="icon icon--orange" role="img" aria-label="laranja"></span>
             </div>
-            <div class="device-card__fruits-mobile">🍎🍎&nbsp; +&nbsp; 🍊🍊🍊&nbsp; =&nbsp; 5</div>
+            <div class="device-card__fruits-mobile"><span class="icon icon--apple" role="img" aria-label="maçã"></span><span class="icon icon--apple" role="img" aria-label="maçã"></span>&nbsp; +&nbsp; <span class="icon icon--orange" role="img" aria-label="laranja"></span><span class="icon icon--orange" role="img" aria-label="laranja"></span><span class="icon icon--orange" role="img" aria-label="laranja"></span>&nbsp; =&nbsp; 5</div>
 
-            <p class="device-card__result">✅ Resposta: 5</p>
-            <p class="device-card__audio">🔊 "A resposta é cinco"</p>
+            <p class="device-card__result"><span class="icon icon--check" aria-hidden="true"></span> Resposta: 5</p>
+            <p class="device-card__audio"><span class="icon icon--volume" aria-hidden="true"></span> "A resposta é cinco"</p>
           </div>
         </div>
 
-        <div class="mobile-summary">
-          <p>🎯 Público: Crianças e adolescentes com Discalculia</p>
-          <p>📸 Câmera ESP32-CAM + OCR + App Mobile</p>
-          <p>🍎 Método visual com frutas para compreensão</p>
-          <p>🔊 Feedback de áudio em tempo real</p>
-        </div>
+
 
         <div class="highlights">
           <div class="highlight">
-            <p class="highlight__title">🎯 Público-alvo</p>
+            <p class="highlight__title"><span class="icon icon--target" aria-hidden="true"></span> Público-alvo</p>
             <p class="highlight__text">Crianças e adolesc. com Discalculia, pais e escolas</p>
           </div>
           <div class="highlight">
-            <p class="highlight__title">🚀 Objetivo</p>
+            <p class="highlight__title"><span class="icon icon--rocket" aria-hidden="true"></span> Objetivo</p>
             <p class="highlight__text">Facilitar a compreensão matemática com IA e frutas</p>
           </div>
           <div class="highlight">
-            <p class="highlight__title">✨ Diferencial</p>
+            <p class="highlight__title"><span class="icon icon--sparkles" aria-hidden="true"></span> Diferencial</p>
             <p class="highlight__text">Único foco em Discalculia: óculos + app + método visual</p>
           </div>
         </div>
@@ -131,16 +126,22 @@
         </div>
 
         <div class="tags">
-          <span class="tag">📸 RESPEBERRY PI 3</span>
-          <span class="tag">🧠 OCR / IA</span>
-          <span class="tag">📱 App Mobile</span>
-          <span class="tag">🍎 Método Visual</span>
-          <span class="tag">👨‍👩‍👧 Controle Parental</span>
-          <span class="tag">📊 Progresso</span>
+          <span class="tag"><span class="icon icon--camera" aria-hidden="true"></span> RESPEBERRY PI 3</span>
+          <span class="tag"><span class="icon icon--brain" aria-hidden="true"></span> OCR / IA</span>
+          <span class="tag"><span class="icon icon--phone" aria-hidden="true"></span> App Mobile</span>
+          <span class="tag"><span class="icon icon--apple" role="img" aria-label="maçã"></span> Método Visual</span>
+          <span class="tag"><span class="icon icon--users" aria-hidden="true"></span> Controle Parental</span>
+          <span class="tag"><span class="icon icon--chart" aria-hidden="true"></span> Progresso</span>
         </div>
 
       </div>
     </section>
+        <div class="mobile-summary">
+          <p><span class="icon icon--target" aria-hidden="true"></span> Público: Crianças e adolescentes com Discalculia</p>
+          <p><span class="icon icon--camera" aria-hidden="true"></span> Câmera ESP32-CAM + OCR + App Mobile</p>
+          <p><span class="icon icon--apple" role="img" aria-label="maçã"></span> Método visual com frutas para compreensão</p>
+          <p><span class="icon icon--volume" aria-hidden="true"></span> Feedback de áudio em tempo real</p>
+        </div>
   </main>
 
   <footer class="footer">
@@ -149,7 +150,7 @@
     </div>
   </footer>
 
-  <script src="js/theme.js"></script>
+  <script src="js/theme.js?v=icons-1"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

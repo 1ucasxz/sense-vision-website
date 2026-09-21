@@ -6,7 +6,7 @@
   if (nav && !nav.querySelector(".menu-theme")) {
     nav.insertAdjacentHTML("beforeend", `
       <div class="menu-theme">
-        <span class="menu-theme__icon" aria-hidden="true">🌙</span>
+        <span class="menu-theme__icon" aria-hidden="true"><span class="icon icon--moon" aria-hidden="true"></span></span>
         <span class="menu-theme__label">Modo Escuro</span>
         <button class="theme-switch" type="button" aria-label="Alternar modo escuro" aria-pressed="false">
           <span class="theme-switch__thumb"></span>
@@ -20,7 +20,7 @@
   if (headerInner && !headerInner.querySelector(".desktop-theme-switch")) {
     headerInner.insertAdjacentHTML("beforeend", `
       <button class="desktop-theme-switch theme-switch" type="button" aria-label="Alternar modo escuro" aria-pressed="false">
-        <span class="desktop-theme-switch__icon" aria-hidden="true">🌙</span>
+        <span class="desktop-theme-switch__icon" aria-hidden="true"><span class="icon icon--moon" aria-hidden="true"></span></span>
         <span class="desktop-theme-switch__label">Modo escuro</span>
       </button>
     `);
@@ -50,7 +50,7 @@
     const desktopLabel = document.querySelector(".desktop-theme-switch__label");
     const desktopIcon = document.querySelector(".desktop-theme-switch__icon");
     if (desktopLabel) desktopLabel.textContent = isDark ? "Modo claro" : "Modo escuro";
-    if (desktopIcon) desktopIcon.textContent = isDark ? "☀️" : "🌙";
+    if (desktopIcon) desktopIcon.innerHTML = `<span class="icon icon--${isDark ? 'sun' : 'moon'}" aria-hidden="true"></span>`;
 
     if (updateAddress) {
       const url = new URL(window.location.href);

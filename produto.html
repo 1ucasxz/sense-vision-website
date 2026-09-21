@@ -8,23 +8,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/produto.css" />
-  <link rel="stylesheet" href="css/dark.css" />
-</head>
+  <link rel="stylesheet" href="css/style.css?v=icons-1" />
+  <link rel="stylesheet" href="css/produto.css?v=icons-1" />
+  <link rel="stylesheet" href="css/dark.css?v=icons-1" />
+<link rel="stylesheet" href="css/icons.css?v=icons-1"><link rel="stylesheet" href="css/responsive.css?v=fluid-1"></head>
 <body class="product-page">
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="index.html" class="logo">Sense<span>Vision</span></a>
-      <nav class="nav" aria-label="Navegação principal">
+      <nav class="nav" id="nav" aria-label="Navegação principal">
         <a href="index.html" class="nav__link">Início</a>
         <a href="instrucoes.html" class="nav__link">Instruções</a>
-        <a href="produto.html" class="nav__link">Produto</a>
-        <a href="#equipe" class="nav__link">Equipe</a>
-        <a href="#referencias" class="nav__link">Referências</a>
-        <a href="#jogo" class="nav__link">O Jogo</a>
+        <a href="produto.html" class="nav__link nav__link--active" aria-current="page">Produto</a>
+        <a href="equipe.html" class="nav__link">Equipe</a>
+        <a href="referencias.html" class="nav__link">Referências</a>
+        <a href="jogo.html" class="nav__link">O Jogo</a>
       </nav>
-      <a href="#jogo" class="btn btn--pill btn--teal header__cta">Jogar 🎮</a>
+      <a href="jogo.html" class="btn btn--pill btn--teal header__cta">Jogar <span class="icon icon--game" aria-hidden="true"></span></a>
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
@@ -46,7 +46,7 @@
       </div>
 
       <article class="component-row">
-        <span class="component-row__icon" aria-hidden="true">📷</span>
+        <span class="component-row__icon" aria-hidden="true"><span class="icon icon--camera" aria-hidden="true"></span></span>
         <h2>Microcontrolador + Câmera</h2>
         <p data-mobile="ESP32-CAM com câmera integrada">RESPEBERRY PI 3 + câmera espiã</p>
         <strong class="component-row__min" data-mobile="R$ 50">R$ 300,00</strong>
@@ -55,7 +55,7 @@
       </article>
 
       <article class="component-row">
-        <span class="component-row__icon" aria-hidden="true">📳</span>
+        <span class="component-row__icon" aria-hidden="true"><span class="icon icon--phone" aria-hidden="true"></span></span>
         <h2>Feedback tátil + Display</h2>
         <p>Motor de vibração + Mini OLED</p>
         <strong class="component-row__min" data-mobile="R$ 35">R$ 35,00</strong>
@@ -64,7 +64,7 @@
       </article>
 
       <article class="component-row">
-        <span class="component-row__icon" aria-hidden="true">🔋</span>
+        <span class="component-row__icon" aria-hidden="true"><span class="icon icon--battery" aria-hidden="true"></span></span>
         <h2>Alimentação</h2>
         <p>Bateria Li-Po + módulo carregador</p>
         <strong class="component-row__min" data-mobile="R$ 40">R$ 40,00</strong>
@@ -73,7 +73,7 @@
       </article>
 
       <article class="component-row">
-        <span class="component-row__icon" aria-hidden="true">🥽</span>
+        <span class="component-row__icon" aria-hidden="true"><span class="icon icon--glasses" aria-hidden="true"></span></span>
         <h2>Estrutura dos Óculos</h2>
         <p>Armação ou impressão 3D</p>
         <strong class="component-row__min" data-mobile="R$ 40">R$ 40,00</strong>
@@ -100,7 +100,7 @@
 
     <section class="product-total">
       <span class="product-total__accent" aria-hidden="true"></span>
-      <h2>💰 Custo Total do Protótipo</h2>
+      <h2><span class="icon icon--wallet" aria-hidden="true"></span> Custo Total do Protótipo</h2>
       <p>+30% margem recomendada para imprevistos.</p>
       <strong data-mobile="R$ 165 – R$ 230">R$500 – R$ 780</strong>
     </section>
@@ -111,7 +111,7 @@
       <p>© 2026&nbsp; SenseVision · TCC 3º Ano</p>
     </div>
   </footer>
-  <script src="js/theme.js"></script>
+  <script src="js/theme.js?v=icons-1"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
