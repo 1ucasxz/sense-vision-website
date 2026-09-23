@@ -21,23 +21,33 @@ main, .instructions-main, .product-main, .page-main { flex: 1 0 auto; }
 .nav-open .nav__link--active::after { left: auto; bottom: auto; height: auto; background: none; }
 
 @media (min-width: 769px) {
+  .header__inner { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+  .header .logo { grid-column: 1; grid-row: 1; justify-self: start; }
+  .header .nav { grid-column: 2; grid-row: 1; margin: 0; justify-content: center; }
+  .header .desktop-theme-switch { grid-column: 3; grid-row: 1; justify-self: end; margin-right: 148px; }
+  .header .header__cta { grid-column: 3; grid-row: 1; justify-self: end; }
   main { height: auto; }
   .container { padding-inline: var(--gutter); }
-  .hero__content { left: var(--gutter); width: calc(51% - var(--gutter) - 20px); }
+  .hero__grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 28px 40px; padding-block: 38px 28px; }
+  .hero__content { position: static; width: 100%; min-width: 0; }
+  .hero__content > .badge-pill, .hero__title, .hero__description, .hero__actions { position: static; }
+  .hero__title { margin-top: 12px; }
+  .hero__description { margin-top: 20px; }
+  .hero__actions { margin-top: 40px; }
   .hero__title { width: 100%; font-size: clamp(36px, 4.45vw, 72px); line-height: 1.16; }
   .hero__title .hero__subtitle { font-size: clamp(25px, 2.78vw, 44px); line-height: 1.2; }
   .hero__description { width: 100%; top: 288px; }
   .hero__description br { display: none; }
-  .hero__visual { left: auto; right: var(--gutter); width: calc(45% - var(--gutter)); }
+  .hero__visual { position: relative; inset: auto; width: 100%; min-width: 0; align-self: center; }
   .device-card { width: 100%; }
   .device-card > * { width: calc(100% - 40px); }
   .device-card__label::after { left: 20%; width: 60%; }
   .device-card__fruits { font-size: clamp(16px, 1.53vw, 24px); }
   .hero__actions { flex-wrap: wrap; width: 100%; }
   .hero__ellipse--right { left: auto; right: -40px; }
-  .highlights { left: var(--gutter); width: calc(100% - 2 * var(--gutter)); height: auto; min-height: 76px; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .highlights { position: static; grid-column: 1 / -1; width: 100%; height: auto; min-height: 76px; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
   .highlight__text { white-space: normal; }
-  .hero, .hero__grid { height: 620px; }
+  .hero, .hero__grid { height: auto; }
   .stats { height: auto; padding-bottom: 24px; }
   .stats__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .tags { width: 100%; height: auto; min-height: 72px; padding-block: 16px; grid-template-columns: repeat(6, minmax(0, 1fr)); }
@@ -90,11 +100,14 @@ main, .instructions-main, .product-main, .page-main { flex: 1 0 auto; }
   .how-card { height: auto; min-height: 88px; }
 }
 
-@media (min-width: 769px) and (max-width: 1100px) {
+@media (min-width: 769px) and (max-width: 1300px) {
   .header, .header__inner { height: auto; min-height: 110px; }
-  .header__inner { flex-wrap: wrap; padding-block: 12px; gap: 14px; }
+  .header__inner { display: flex; flex-wrap: wrap; padding-block: 12px; gap: 14px; }
   .header .nav { order: 4; flex-basis: 100%; justify-content: center; gap: 28px; }
-  .header .desktop-theme-switch { margin-left: auto; }
+  .header .desktop-theme-switch { margin-left: auto; margin-right: 0; }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
   .hero, .hero__grid { height: auto; }
   .hero__grid { display: grid; grid-template-columns: 1fr; gap: 28px; padding-block: 28px; }
   .hero__content, .hero__visual, .highlights { position: relative; inset: auto; width: 100%; }
