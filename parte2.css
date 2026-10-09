@@ -1,4 +1,9 @@
 :root{--page-bg:#f8fbff;--panel:#fff;--ink:#101828;--muted:#667085;--teal:#00b8b5;--pink:#f03c8a}
+.member-social:hover { text-decoration: underline; }
+.member-social:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; }
+.contact-panel { height: auto !important; }
+.contact-form .form-status { display: block; grid-column: 1 / -1; line-height: 1.5; }
+.contact-form { grid-template-rows: 44px 44px 40px auto !important; }
 .page-main{height:auto;min-height:916px;background:var(--page-bg)}
 .page-intro{height:108px;display:flex;flex-direction:column;justify-content:center;padding-left:max(64px,calc((100vw - 1312px)/2));position:relative}
 .page-intro:before{content:"";position:absolute;left:max(46px,calc((100vw - 1348px)/2));width:6px;height:64px;border-radius:8px;background:var(--teal)}
