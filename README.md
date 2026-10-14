@@ -39,7 +39,7 @@ projeto como diretório de publicação.
 ## Pendências da etapa 2
 
 - Receber o vídeo real do jogo e verificar duração máxima de 40 segundos.
-- Confirmar com a equipe o destino GDevelop; o botão preserva o endereço do
+- O botão preserva o endereço do
   jogo solicitado anteriormente: https://maxxagenciadigital.com.br/matf/.
 - O formulário abre o aplicativo de e-mail com uma mensagem para
   lucas2008barboza@gmail.com. O usuário precisa concluir o envio nesse aplicativo;

@@ -50,6 +50,8 @@
     const desktopLabel = document.querySelector(".desktop-theme-switch__label");
     const desktopIcon = document.querySelector(".desktop-theme-switch__icon");
     if (desktopLabel) desktopLabel.textContent = isDark ? "Modo claro" : "Modo escuro";
+    const desktopButton = document.querySelector(".desktop-theme-switch");
+    if (desktopButton) desktopButton.setAttribute("aria-label", isDark ? "Ativar modo claro" : "Ativar modo escuro");
     if (desktopIcon) desktopIcon.innerHTML = `<span class="icon icon--${isDark ? 'sun' : 'moon'}" aria-hidden="true"></span>`;
 
     if (updateAddress) {
