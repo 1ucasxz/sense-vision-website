@@ -1,0 +1,16 @@
+name = "sensevision"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+# Serve o site estático (mesma origem da API: sem CORS, sem servidor local)
+[assets]
+directory = "../../dist"
+run_worker_first = ["/api/*"]
+
+# Guarda a última foto enviada pelo Raspberry (criado automaticamente no deploy)
+[[kv_namespaces]]
+binding = "PHOTOS"
+
+# Segredos (NÃO ficam neste arquivo), definidos com `npx wrangler secret put`:
+#   GEMINI_API_KEY  - chave do Google AI Studio
+#   UPLOAD_TOKEN    - senha que o Raspberry envia para poder subir fotos

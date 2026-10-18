@@ -8,3 +8,9 @@ Thumbs.db
 
 # Logs
 *.log
+node_modules/
+dist/
+.wrangler/
+.dev.vars*
+.env*
+backend/db-api/api/config.php

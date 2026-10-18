@@ -1,6 +1,8 @@
 (function () {
   const params = new URLSearchParams(window.location.search);
-  let isDark = params.get("theme") === "dark";
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem("sv-theme"); } catch (_) {}
+  let isDark = (params.get("theme") || savedTheme) === "dark";
 
   const nav = document.querySelector(".nav");
   if (nav && !nav.querySelector(".menu-theme")) {
@@ -44,6 +46,7 @@
   }
 
   function applyTheme(updateAddress) {
+    try { localStorage.setItem("sv-theme", isDark ? "dark" : "light"); } catch (_) {}
     document.body.classList.toggle("theme-dark", isDark);
     document.documentElement.style.colorScheme = isDark ? "dark" : "light";
     switchButtons.forEach((button) => button.setAttribute("aria-pressed", String(isDark)));

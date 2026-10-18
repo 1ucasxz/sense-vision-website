@@ -1,11 +1,49 @@
-document.querySelector('.contact-form')?.addEventListener('submit', (event) => {
+// Formulário de contato: envia a mensagem por e-mail (FormSubmit) para a equipe
+const CONTACT_EMAIL = "lucas2008barboza@gmail.com";
+
+document.querySelector('.contact-form')?.addEventListener('submit', async (event) => {
   event.preventDefault();
   const form = event.currentTarget;
-  if (!form.reportValidity()) return;
-  const data = new FormData(form);
-  const subject = encodeURIComponent(`Contato SenseVision — ${data.get('nome').trim()}`);
-  const body = encodeURIComponent(`Nome: ${data.get('nome').trim()}\nE-mail: ${data.get('email').trim()}\n\n${data.get('mensagem').trim()}`);
   const status = form.querySelector('.form-status');
-  if (status) status.textContent = 'Conclua o envio no seu aplicativo de e-mail. Se ele não abrir, envie a mensagem para lucas2008barboza@gmail.com. Os campos foram preservados.';
-  window.location.href = `mailto:lucas2008barboza@gmail.com?subject=${subject}&body=${body}`;
+  const button = form.querySelector('button[type="submit"]');
+  const show = (msg, ok) => {
+    if (!status) return;
+    status.textContent = msg;
+    status.style.color = ok ? 'var(--color-text)' : '#ef4444';
+    status.classList.add('is-visible');
+  };
+
+  if (!form.checkValidity()) {
+    show('Preencha nome, e-mail válido e mensagem.', false);
+    return;
+  }
+  if (form.elements._honey?.value) return; // anti-spam: robôs preenchem este campo oculto
+
+  const data = new FormData(form);
+  button.disabled = true;
+  show('Enviando...', true);
+
+  try {
+    const resp = await fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        _subject: 'Novo contato pelo site SenseVision',
+        _captcha: 'false',
+        _replyto: data.get('email'),
+        Nome: data.get('nome'),
+        Email: data.get('email'),
+        Mensagem: data.get('mensagem'),
+      }),
+    });
+    const result = await resp.json().catch(() => ({}));
+    if (!resp.ok || result.success === 'false' || result.success === false) throw new Error(result.message || resp.status);
+    show('Mensagem enviada! Responderemos em breve.', true);
+    form.reset();
+  } catch (e) {
+    console.error('Falha ao enviar contato:', e);
+    show('Não foi possível enviar agora. Tente novamente em instantes.', false);
+  } finally {
+    button.disabled = false;
+  }
 });

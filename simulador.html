@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SenseVision — Simulador Interativo com Frutas</title>
+  <meta name="description" content="Simulador pedagógico SenseVision: digite uma expressão matemática pelo teclado e veja a conversão sensorial em frutas e áudio narrado para pessoas com Discalculia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="css/icons.css?v=icons-1"><link rel="stylesheet" href="css/design.css?v=features-1"><link rel="stylesheet" href="css/visual.css?v=features-1"><link rel="stylesheet" href="css/features.css?v=1"><link rel="stylesheet" href="css/refinement.css?v=review-1"></head>
+<body class="simulador-page"><a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Sense<span>Vision</span></a>
+
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <a href="index.html" class="nav__link">Início</a>
+        <a href="instrucoes.html" class="nav__link">Instruções</a>
+        <a href="produto.html" class="nav__link">Produto</a>
+        <a href="simulador.html" class="nav__link nav__link--active" aria-current="page">Simulador</a>
+        <a href="equipe.html" class="nav__link">Equipe</a>
+        <a href="referencias.html" class="nav__link">Referências</a>
+        <a href="jogo.html" class="nav__link">O Jogo</a>
+      </nav>
+
+      <a href="jogar.html" class="btn btn--pill btn--teal header__cta">Jogar <span class="icon icon--game" aria-hidden="true"></span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="simulador-main" id="conteudo" tabindex="-1">
+    <!-- Cabeçalho / Hero -->
+    <section class="simulador-hero page-intro">
+      <div class="simulador-badge">
+        <span class="icon icon--brain" aria-hidden="true"></span>
+        <span>Pedagogia Inclusiva para Discalculia</span>
+      </div>
+      <h1 class="simulador-title">
+        Simulador de Matemática <span>com Frutas</span>
+      </h1>
+      <p class="simulador-subtitle">
+        Digite qualquer operação aritmética pelo teclado. O sistema SenseVision converterá os números abstratos em grupos concretos de frutas, com decomposição passo a passo e narração por áudio.
+      </p>
+    </section>
+
+    <!-- Layout do Simulador: Entrada (Esquerda) e Saída (Direita) -->
+    <div class="simulador-layout">
+      
+      <!-- Cartão de Entrada (Teclado) -->
+      <section class="sim-card" aria-label="Entrada de expressão matemática">
+        <div class="sim-card__header">
+          <h2 class="sim-card__title">
+            <span class="icon icon--book" aria-hidden="true"></span>
+            Entrada pelo Teclado
+          </h2>
+          <p class="sim-card__desc">
+            Escreva a conta (ex: <strong>3 + 2</strong>, <strong>8 - 3</strong>, <strong>4 * 2</strong> ou <strong>10 / 2</strong>) e aperte <strong>Enter</strong>.
+          </p>
+        </div>
+
+        <!-- Campo de Digitação -->
+        <div class="input-wrapper">
+          <input 
+            type="text" 
+            id="mathInput" 
+            class="sim-input" 
+            placeholder="Ex: 3 + 2" 
+            aria-label="Digite a expressão matemática"
+            
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+
+        <!-- Exemplos Rápidos com 1 Clique -->
+        <span class="presets-label"> Exemplos rápidos:</span>
+        <div class="presets-grid">
+          <button type="button" class="preset-chip" data-expr="3 + 2">3 + 2</button>
+          <button type="button" class="preset-chip" data-expr="7 - 4">7 - 4</button>
+          <button type="button" class="preset-chip" data-expr="3 * 3">3 × 3</button>
+          <button type="button" class="preset-chip" data-expr="10 / 2">10 ÷ 2</button>
+          <button type="button" class="preset-chip" data-expr="8 + 5">8 + 5</button>
+          <button type="button" class="preset-chip" data-expr="9 / 3">9 ÷ 3</button>
+        </div>
+
+        <!-- Seletor de Frutas -->
+        <div class="fruit-selector">
+          <span class="presets-label">Escolha a fruta pedagógica:</span>
+          <div class="fruit-options">
+            <button type="button" class="fruit-btn active" data-fruit="auto" title="Aleatório">Aleatório</button>
+            <button type="button" class="fruit-btn" data-fruit="maca" title="Maçãs">Maçã</button>
+            <button type="button" class="fruit-btn" data-fruit="banana" title="Bananas">Banana</button>
+            <button type="button" class="fruit-btn" data-fruit="laranja" title="Laranjas">Laranja</button>
+            <button type="button" class="fruit-btn" data-fruit="morango" title="Morangos">Morango</button>
+            <button type="button" class="fruit-btn" data-fruit="uva" title="Uvas">Uva</button>
+          </div>
+        </div>
+
+        <!-- Teclado Numérico Virtual de Apoio -->
+        <span class="presets-label"> Teclado auxiliar:</span>
+        <div class="keypad-grid">
+          <button type="button" class="key-btn" data-key="7">7</button>
+          <button type="button" class="key-btn" data-key="8">8</button>
+          <button type="button" class="key-btn" data-key="9">9</button>
+          <button type="button" class="key-btn op-key" data-key=" / ">÷</button>
+
+          <button type="button" class="key-btn" data-key="4">4</button>
+          <button type="button" class="key-btn" data-key="5">5</button>
+          <button type="button" class="key-btn" data-key="6">6</button>
+          <button type="button" class="key-btn op-key" data-key=" * ">×</button>
+
+          <button type="button" class="key-btn" data-key="1">1</button>
+          <button type="button" class="key-btn" data-key="2">2</button>
+          <button type="button" class="key-btn" data-key="3">3</button>
+          <button type="button" class="key-btn op-key" data-key=" - ">-</button>
+
+          <button type="button" class="key-btn clear-key" data-key="C">C</button>
+          <button type="button" class="key-btn" data-key="0">0</button>
+          <button type="button" class="key-btn clear-key" data-key="backspace">⌫</button>
+          <button type="button" class="key-btn op-key" data-key=" + ">+</button>
+        </div>
+
+        <!-- Botão de Converter -->
+        <button type="button" id="btnCalc" class="btn-calc">
+          <span>Converter em Frutas</span>
+          <span></span>
+        </button>
+
+        <!-- Botão Câmera Ao Vivo -->
+        <button type="button" id="btnLiveMode" class="btn-live">
+           Câmera Ao Vivo (Raspberry Pi)
+        </button>
+
+        <!-- Painel de status do modo ao vivo -->
+        <div id="livePanel" class="live-panel" style="display:none;">
+          <div class="live-panel__pulse">
+            <span class="live-dot"></span>
+            <span>AO VIVO</span>
+          </div>
+          <p id="liveStatus" role="status" aria-live="polite" class="live-status-text">Aguardando...</p>
+        </div>
+      </section>
+
+      <!-- Cartão de Resultados (Saída Pedagógica) -->
+      <section class="result-card" aria-label="Resultado da conversão pedagógica">
+        
+        <!-- Simulação de Hardware (Buzzer & Câmera) -->
+        <div class="hw-status">
+          <div class="hw-status__indicators">
+            <div class="hw-indicator">
+              <span class="hw-dot"></span>
+              <span>Raspberry Pi 3B+</span>
+            </div>
+            <div class="hw-indicator">
+              <span> Buzzer Ativo</span>
+            </div>
+          </div>
+          <button type="button" id="testBuzzerBtn" class="hw-sound-btn" title="Simular bip sonoro do buzzer">
+            <span>Testar Bip</span>
+            <span></span>
+          </button>
+        </div>
+
+        <!-- Passos Detalhados -->
+        <div class="steps-box">
+          <h2 class="steps-title">
+            <span class="icon icon--check" aria-hidden="true"></span>
+            Como resolver, passo a passo
+          </h2>
+          <ul id="stepsList" style="list-style: none; padding: 0; margin: 0;"></ul>
+        </div>
+
+        <!-- Caixa de Narração em Áudio (TTS) -->
+        <div class="narration-box">
+          <div class="narration-header">
+            <span class="narration-title">
+              <span class="icon icon--volume" aria-hidden="true"></span>
+              Narração Pedagógica (Voz em Português)
+            </span>
+          </div>
+          <p id="narrationText" class="narration-text">
+            Você tem 3 maçãs e ganhou mais 2 maçãs. Juntando todas na cesta, agora você tem 5 maçãs!
+          </p>
+          <div class="narration-controls">
+            <button type="button" id="btnSpeak" class="btn-speak">
+              <span id="speakLabel">Ouvir narração</span>
+              <span></span>
+            </button>
+            <button type="button" id="speedToggle" class="speed-toggle">
+              Velocidade: 0.9x (Didática)
+            </button>
+          </div>
+        </div>
+
+        <!-- Resposta (visual, por último) -->
+        <div class="equation-display">
+          <div class="equation-label">Resposta</div>
+          <div id="fruitsDisplay" class="fruits-concrete-display"></div>
+          <details class="fv-numbers">
+            <summary>Ver a conta em números</summary>
+            <div id="equationOriginal" class="equation-original"></div>
+          </details>
+          <p id="historyNote" role="status" class="history-note"></p>
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- Fundamentação Científica: O Método CPA de Jerome Bruner -->
+    <section class="cpa-section" aria-label="Fundamentação teórica do método">
+      <div class="cpa-grid">
+        <article class="cpa-card">
+          <span class="cpa-tag">Etapa 1 • Concreto</span>
+          <h3>Manipulação Sensorial</h3>
+          <p>
+            Alunos com discalculia apresentam dificuldade de visualizar quantidades abstratas. Frutas representam objetos familiares do mundo real, facilitando a contagem individual.
+          </p>
+        </article>
+
+        <article class="cpa-card">
+          <span class="cpa-tag">Etapa 2 • Pictórico</span>
+          <h3>Representação Visual</h3>
+          <p>
+            Em vez de lidar com os símbolos "+", "-" ou "÷" no vazio, o cérebro processa o agrupamento em cestas  e a distribuição entre amigos , reduzindo a sobrecarga cognitiva.
+          </p>
+        </article>
+
+        <article class="cpa-card">
+          <span class="cpa-tag">Etapa 3 • Auditivo</span>
+          <h3>Reforço Multissensorial</h3>
+          <p>
+            A narração falada em português aliada ao bip sonoro do buzzer valida o resultado de forma imediata, construindo autoconfiança no aprendizado matemático.
+          </p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer"><div class="footer__inner"><a class="logo" href="index.html">Sense<span>Vision</span></a><p>© 2026 SenseVision · TCC 3º Ano · Tecnologia que transforma aprendizado</p></div></footer>
+
+  <!-- Scripts -->
+  <script src="js/theme.js?v=features-1"></script><script src="js/auth.js?v=features-1"></script>
+  <script src="js/script.js"></script>
+  <script src="js/visual.js"></script>
+  <script src="js/simulador.js?v=features-1"></script>
+</body>
+</html>

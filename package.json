@@ -2,5 +2,15 @@
   "name": "sense-vision-website",
   "private": true,
   "version": "1.0.0",
-  "engines": { "node": "24.x" }
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && wrangler dev --config backend/cloud/wrangler.toml --ip 127.0.0.1 --port 5174",
+    "deploy:cloudflare": "node scripts/build.mjs && wrangler deploy --config backend/cloud/wrangler.toml"
+  },
+  "devDependencies": {
+    "wrangler": "^4.151.1"
+  }
 }

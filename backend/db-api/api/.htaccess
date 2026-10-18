@@ -1,0 +1,8 @@
+# Ninguém pode abrir o arquivo de configuração pelo navegador
+<Files "config.php">
+  Require all denied
+</Files>
+<Files "config.example.php">
+  Require all denied
+</Files>
+Options -Indexes

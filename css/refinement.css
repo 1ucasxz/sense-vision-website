@@ -1,0 +1,128 @@
+/* Design review: preserve every existing palette token and all page behavior. */
+:root {
+  --space-3: 12px;
+  --space-5: 20px;
+  --space-10: 40px;
+  --section-space: clamp(40px, 5vw, 72px);
+  --panel-padding: clamp(20px, 2.5vw, 32px);
+  --control-height: 48px;
+  --duration-feedback: 160ms;
+}
+/* One typographic rhythm, including functional screens. */
+h1 { font-size: clamp(34px, 4vw, 56px); letter-spacing: -.04em; line-height: 1.14; }
+h2 { line-height: 1.3; }
+p { text-wrap: pretty; }
+.page-main,.instructions-main,.product-main,.simulador-main,.hist-main,.play-main {
+  padding-block: var(--section-space);
+}
+.page-intro,.instructions-heading,.product-heading {
+  margin-bottom: var(--space-10); padding-bottom: var(--space-8);
+}
+.page-intro p,.instructions-heading p,.product-heading p,.simulador-subtitle {
+  font-size: 17px; line-height: 1.75; max-width: 65ch;
+}
+.eyebrow,.simulador-badge { font-size: 12px; letter-spacing: .1em; font-weight: 700; }
+.nav__link { transition: background var(--duration-feedback),color var(--duration-feedback); }
+.nav__link:hover { color: var(--color-text); }
+.header__actions { gap: var(--space-3); }
+.auth-btn,.desktop-theme-switch { min-height: 44px; }
+/* Hero: balanced text/illustration composition; unchanged assets and colors. */
+.hero { padding-block: clamp(48px, 7vw, 96px) 40px; }
+.hero__grid { gap: 56px 48px; grid-template-columns: 1fr 1fr; }
+.hero__title { font-size: clamp(38px, 4.2vw, 60px); max-width: 15ch; letter-spacing: -.045em; }
+.hero__description { max-width: 48ch; line-height: 1.8; }
+.hero__actions { gap: 12px; margin-top: 28px; }
+.device-card { padding: clamp(24px, 3vw, 44px); }
+.device-card__fruits { margin-block: 28px; }
+.highlights { gap: 24px; padding-top: 28px; }
+.highlight__title { font-size: 14px; }.highlight__text { line-height: 1.75; }
+/* Shared panels and readable secondary copy across informational pages. */
+.step-card,.ref-card,.story-card,.how-card,.cpa-card { padding: var(--panel-padding); }
+.step-card p,.ref-card p,.how-card div>span,.cpa-card p { font-size: 15px; line-height: 1.75; }
+.step-card__number { margin-bottom: 36px; }
+.ref-card h2 { font-size: 23px; line-height: 1.35; }
+.ref-card a { min-height: 48px; display: flex; align-items: center; }
+.ref-tag { font-size: 12px; margin-bottom: 20px; }
+.member-card { padding: 16px; }
+.member-photo { margin-bottom: 20px; }
+.member-social,.member-contact { min-height: 44px; display: flex; align-items: center; font-size: 13px; }
+.member-card h2 { line-height: 1.4; }
+.contact-panel { padding: var(--panel-padding); gap: 24px 48px; }
+.contact-field label { font-size: 14px; }
+.contact-field input,.contact-field textarea,.auth-form input {
+  transition: border-color var(--duration-feedback); min-height: var(--control-height);
+}
+.contact-field input:hover,.contact-field textarea:hover,.auth-form input:hover { border-color: var(--color-text); }
+.form-status { font-size: 14px; line-height: 1.6; }
+.components-table__header { font-weight: 700; }
+.component-row p,.component-row__store { font-size: 14px; }
+.recurring-costs article { background: var(--color-surface); border-radius: var(--radius-lg); padding: 24px; }
+.product-total { padding: var(--panel-padding); }
+.game-hero { padding-block: 48px; }
+.game-hero h1 { max-width: 16ch; }
+.game-actions { margin-top: 40px; }
+.play-hint { text-align: center; line-height: 1.7; }
+/* Simulator: distinguish input, explanation and answer without new colors. */
+.simulador-title { max-width: 24ch; }
+.simulador-layout { gap: 32px; grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); }
+.sim-card { padding: var(--panel-padding); }
+.sim-card__title,.steps-title { font-size: 22px; line-height: 1.35; }
+.sim-card__desc { line-height: 1.75; font-size: 15px; }
+.sim-input { min-height: 68px; font-size: 28px; letter-spacing: .02em; }
+.presets-label { font-size: 14px; margin-bottom: 12px; }
+.fruit-options { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }
+.fruit-btn,.preset-chip { padding-inline: 8px; min-height: var(--control-height); }
+.key-btn { min-height: 52px; }
+.btn-calc { min-height: 52px; }
+.steps-box,.narration-box,.equation-display { padding: var(--panel-padding); }
+.equation-display { background: var(--color-tint); border-radius: 0 0 var(--radius-lg) var(--radius-lg); }
+.narration-text { font-size: 16px; line-height: 1.75; }
+.history-note { line-height: 1.7; }
+.history-note a { display: inline-block; padding-block: 8px; }
+.hist-head h1 { font-size: clamp(32px,4vw,48px); }
+.hist-item { padding: var(--panel-padding); }
+.hist-empty { padding: clamp(32px,5vw,64px) 24px; }
+.hist-empty strong { line-height: 1.4; }
+.auth-tabs { padding: 4px; background: var(--color-bg); border-radius: var(--radius-sm); }
+.auth-tabs button { flex: 1; font-weight: 600; }
+.auth-modal h2 { font-size: 28px; }
+.auth-error:empty { display: none; }
+.auth-form .auth-submit { width: 100%; }
+.auth-switch { line-height: 1.7; }
+/* Clear, non-layout-shifting feedback; colors always come from existing tokens. */
+:is(.btn,.auth-btn,.key-btn,.fruit-btn,.preset-chip,.btn-live,.btn-calc,.btn-speak,.hist-redo,.play-full,.play-back) {
+  transition: border-color var(--duration-feedback),box-shadow var(--duration-feedback),background var(--duration-feedback);
+}
+:is(.auth-btn,.fruit-btn,.btn-live,.play-full,.play-back):hover { border-color: var(--color-primary); }
+:is(.btn,.auth-submit,.btn-calc,.btn-speak):active { box-shadow: inset 0 0 0 2px var(--color-text); }
+:where(summary):focus-visible { outline: 3px solid var(--color-focus); outline-offset: 4px; }
+@media (max-width: 900px) {
+  .hero__grid,.simulador-layout { grid-template-columns: 1fr; }
+  .hero__content { max-width: 680px; }
+  .hero__visual { width: min(100%,600px); }
+}
+@media (max-width: 768px) {
+  .page-intro,.instructions-heading,.product-heading { margin-bottom: 28px; padding-bottom: 24px; }
+  .hero { padding-block: 40px 32px; }.hero__grid { gap: 36px; }
+  .hero__title { font-size: clamp(36px,8vw,48px); }
+  .hero__description,.page-intro p,.instructions-heading p,.product-heading p { font-size: 16px; }
+  .highlights { gap: 20px; }
+  .nav__link { min-height: 48px; padding-inline: 16px; }
+  .menu-toggle { position: relative; flex: 0 0 44px; }
+  .menu-toggle>span { position: absolute; left: 11px; top: 20px; }
+  .menu-toggle>span:first-child { transform: translateY(-7px); }
+  .menu-toggle>span:last-child { transform: translateY(7px); }
+  .menu-toggle.is-active>span:first-child { transform: rotate(45deg); }
+  .menu-toggle.is-active>span:last-child { transform: rotate(-45deg); }
+  .theme-switch:not(.desktop-theme-switch) { min-height: 44px; display: flex; align-items: center; }
+  .simulador-title { font-size: 36px; }
+  .simulador-layout { gap: 24px; }
+  .narration-controls>* { flex: 1 1 150px; }
+  .game-hero { padding: 28px; }
+  .hist-actions { flex-wrap: wrap; }
+  .contact-panel { gap: 20px; }
+  .member-social,.member-contact { font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,*::before,*::after { transition: none !important; }
+}

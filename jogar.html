@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jogar MathFruit Quest | SenseVision</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/icons.css?v=icons-1"><link rel="stylesheet" href="css/design.css?v=features-1"><link rel="stylesheet" href="css/visual.css?v=features-1"><link rel="stylesheet" href="css/features.css?v=1"><link rel="stylesheet" href="css/refinement.css?v=review-1"></head><body><a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Sense<span>Vision</span></a>
+
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <a href="index.html" class="nav__link">Início</a>
+        <a href="instrucoes.html" class="nav__link">Instruções</a>
+        <a href="produto.html" class="nav__link">Produto</a>
+        <a href="simulador.html" class="nav__link">Simulador</a>
+        <a href="equipe.html" class="nav__link">Equipe</a>
+        <a href="referencias.html" class="nav__link">Referências</a>
+        <a href="jogo.html" class="nav__link nav__link--active" aria-current="page">O Jogo</a>
+      </nav>
+
+      <a href="jogar.html" class="btn btn--pill btn--teal header__cta">Jogar <span class="icon icon--game" aria-hidden="true"></span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+<main class="play-main" id="conteudo" tabindex="-1">
+<div class="play-stage">
+<div class="play-bar"><a class="play-back" href="jogo.html">&larr; Voltar</a><h1>MathFruit <span>Quest</span></h1><button class="play-full" id="btnFull" type="button">Tela cheia</button></div>
+<div class="play-frame"><iframe id="gameFrame" src="game/index.html" title="MathFruit Quest" allow="autoplay; fullscreen" loading="eager"></iframe></div>
+<p class="play-hint">Clique dentro do jogo para começar. Use o som do seu dispositivo para ouvir os efeitos.</p>
+</div>
+</main>
+<footer class="footer"><div class="footer__inner"><a class="logo" href="index.html">Sense<span>Vision</span></a><p>© 2026 SenseVision · TCC 3º Ano · Tecnologia que transforma aprendizado</p></div></footer><script src="js/theme.js?v=features-1"></script><script src="js/auth.js?v=features-1"></script><script src="js/script.js"></script>
+<script>document.getElementById("btnFull").addEventListener("click",function(){var f=document.getElementById("gameFrame");(f.requestFullscreen||f.webkitRequestFullscreen||function(){}).call(f);});</script></body></html>
